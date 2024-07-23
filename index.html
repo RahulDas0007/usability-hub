@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usability-Hub (clone)</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             <a href="#" class="company-logo">
                 <img src="assets/asset 0.png" alt="company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -34,6 +35,9 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -123,7 +127,7 @@
 
     <!-- BIG FEATURES SECTION -->
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container big-feature-part2">
             <div class="feature-image">
                 <img src="assets/asset 15.png" alt="">
             </div>
@@ -136,7 +140,7 @@
         </div>
     </section>
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container" id="big-feature-part">
             <div class="feature-desc flex">
                 <h4>Effortless Validation For</h4>
                 <h3>Design Professionals</h3>
@@ -149,7 +153,7 @@
         </div>
     </section>
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container big-feature-part2">
             <div class="feature-image">
                 <img src="assets/asset 17.png" alt="">
             </div>
@@ -206,7 +210,7 @@
         <div class="container flex cta-section-container">
             <h2>Start Testing Today.</h2>
             <p>Take the guesswork out of the design descusion</p>
-            <a href="#" class="primary-button">Get Start</a>
+            <a href="#" class="primary-button">Get Started</a>
         </div>
     </section>
 
@@ -261,6 +265,14 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/9b5fe715af.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
